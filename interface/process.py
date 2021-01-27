@@ -1,3 +1,4 @@
+from sqlite3 import connect
 from ics import Calendar
 
 def add_to_data(data: dict, time: 'Arrow', name: str) -> None:
@@ -17,3 +18,7 @@ def process_ics(file: str) -> dict:
             time = event.begin.to('Asia/Taipei')
             add_to_data(data, time, event.name)
     return data
+
+def process(file: str, success):
+    data = process_ics(file)
+    success()
