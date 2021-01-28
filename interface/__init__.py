@@ -1,13 +1,6 @@
-from PySide6.QtWidgets import (QApplication,
-                               QLabel,
-                               QPushButton,
-                               QVBoxLayout,
-                               QFileDialog,
-                               QMessageBox,
-                               QWidget)
-from PySide6.QtGui import (QIcon,
-                           QPixmap)
-from interface.process import process_ics
+from PySide6.QtGui import QIcon, QPixmap
+from PySide6.QtWidgets import QApplication, QLabel, QPushButton, QVBoxLayout, QFileDialog, QMessageBox, QWidget
+# from interface.process import process_ics
 
 
 class DCCUI(QWidget):
@@ -44,7 +37,8 @@ class DCCUI(QWidget):
                                                "",
                                                "iCalendar (*.ics)")
         if filename and filename[0]:
-            process(filename[0], show_success)
+            # process(filename[0], show_success)
+            pass
 
 
 def generate_app() -> tuple:
